@@ -1,15 +1,16 @@
-// pages/inventoryPage.js
 class InventoryPage {
-    /**
-     * @param {import('@playwright/test').Page} page
-     */
     constructor(page) {
         this.page = page;
-        this.inventoryContainer = page.locator('.inventory_list');
+        this.addToCartButton = page.locator('.btn_inventory');
+        this.cartIcon = page.locator('.shopping_cart_link');
     }
 
-    async isLoaded() {
-        await this.inventoryContainer.waitFor();
+    async addItemToCart() {
+        await this.addToCartButton.first().click();
+    }
+
+    async goToCart() {
+        await this.cartIcon.click();
     }
 }
 
