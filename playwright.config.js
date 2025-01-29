@@ -1,9 +1,12 @@
 // playwright.config.js
-module.exports = {
-    testDir: './tests',
-    timeout: 30000,
-    use: {
-        headless: true,
-        viewport: { width: 1280, height: 720 },
-    },
-};
+const { defineConfig } = require('@playwright/test');
+
+module.exports = defineConfig({
+  reporter: [
+    ['list'], // Default list reporter
+    ['playwright-html', { outputFolder: 'html-report' }] // HTML reporter
+  ],
+  use: {
+    headless: true, // Run tests in headless mode
+  },
+});

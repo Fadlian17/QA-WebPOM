@@ -13,5 +13,8 @@
     "@playwright/test": "^1.49.1",
     "pdfkit": "^0.16.0",
     "selenium-webdriver": "^4.28.1"
+  },
+  "devDependencies": {
+    "playwright-html": "1.2.5"
   }
 }
