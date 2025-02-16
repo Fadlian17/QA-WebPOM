@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@cucumber/cucumber": "^11.2.0",
     "@playwright/test": "^1.49.1",
     "pdfkit": "^0.16.0",
     "selenium-webdriver": "^4.28.1"
